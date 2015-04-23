@@ -14,6 +14,7 @@
 		654336591AE8438900637396 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 654336581AE8438900637396 /* Images.xcassets */; };
 		6543365C1AE8438900637396 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6543365A1AE8438900637396 /* LaunchScreen.xib */; };
 		654336681AE8438900637396 /* ResidentInsureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 654336671AE8438900637396 /* ResidentInsureTests.m */; };
+		654336731AE848A800637396 /* MyPoliciesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 654336721AE848A800637396 /* MyPoliciesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		654336611AE8438900637396 /* ResidentInsureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResidentInsureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		654336661AE8438900637396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		654336671AE8438900637396 /* ResidentInsureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResidentInsureTests.m; sourceTree = "<group>"; };
+		654336711AE848A800637396 /* MyPoliciesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPoliciesTableViewController.h; sourceTree = "<group>"; };
+		654336721AE848A800637396 /* MyPoliciesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPoliciesTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				654336501AE8438900637396 /* AppDelegate.m */,
 				654336521AE8438900637396 /* ViewController.h */,
 				654336531AE8438900637396 /* ViewController.m */,
+				654336711AE848A800637396 /* MyPoliciesTableViewController.h */,
+				654336721AE848A800637396 /* MyPoliciesTableViewController.m */,
 				654336551AE8438900637396 /* Main.storyboard */,
 				654336581AE8438900637396 /* Images.xcassets */,
 				6543365A1AE8438900637396 /* LaunchScreen.xib */,
@@ -222,6 +227,7 @@
 				654336541AE8438900637396 /* ViewController.m in Sources */,
 				654336511AE8438900637396 /* AppDelegate.m in Sources */,
 				6543364E1AE8438900637396 /* main.m in Sources */,
+				654336731AE848A800637396 /* MyPoliciesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
