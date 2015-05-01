@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tL3-yM-qdL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tL3-yM-qdL">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
@@ -42,7 +42,7 @@
                             <outlet property="delegate" destination="Oe1-Q4-7gm" id="WZU-wj-Rzz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ResidentInsure" id="mQq-Xo-wSi"/>
+                    <navigationItem key="navigationItem" title="ResidentInsure" id="MNU-rY-Dwx"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCv-QF-RLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,6 +70,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XtO-Ek-Sfb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1023" y="366"/>
+        </scene>
+        <!--Menu Table View Controller-->
+        <scene sceneID="L6v-Cr-QVX">
+            <objects>
+                <tableViewController id="1kW-wl-ipq" customClass="MenuTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kB7-rk-2R9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mrm-bu-r8p">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mrm-bu-r8p" id="fjM-Qt-82X">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1kW-wl-ipq" id="SQl-fN-XeU"/>
+                            <outlet property="delegate" destination="1kW-wl-ipq" id="O0c-8K-TVj"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TgR-jD-3zj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2540" y="360"/>
         </scene>
     </scenes>
 </document>

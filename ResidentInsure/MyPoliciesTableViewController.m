@@ -7,7 +7,7 @@
 //
 
 #import "MyPoliciesTableViewController.h"
-
+#import "MenuTableViewController.h"
 typedef NS_ENUM(NSInteger, myPolcies) {
     myPolciesIntroduction,
     myPolciesPolicyNumber,
@@ -26,21 +26,29 @@ static NSString * const reuseIdentifier = @"PCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor redColor];
 
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"PCell"];
     self.tableView.tableFooterView = [UIView new];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.backgroundColor = [UIColor  redColor];
-//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:nil];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"]style:UIBarButtonItemStylePlain target:self action:nil];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"]style:UIBarButtonItemStylePlain target:self action:@selector(menuButtonPressed)];
        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"editPencileditPencil"]style:UIBarButtonItemStylePlain target:self action:nil];
+
 
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(void)menuButtonPressed {
+    
+    MenuTableViewController *menuView = [MenuTableViewController new];
+    [self showViewController:menuView sender:self];
+    
+    
 }
 
 #pragma mark - Table view data source
@@ -67,10 +75,10 @@ static NSString * const reuseIdentifier = @"PCell";
     myPolcies myPoliciesSection = indexPath.section;
     switch (myPoliciesSection) {
         case myPolciesIntroduction:
-            return 80;
+            return 125;
             break;
         case myPolciesPolicyNumber:
-            return 65;
+            return 55;
             break;
         case myPolciesInsuredInformation:
             if(indexPath.row == 1){
@@ -79,11 +87,14 @@ static NSString * const reuseIdentifier = @"PCell";
                 return 44;
             }
             break;
-        default:
+        case myPolciesPaymentInformation:
+            if (indexPath.row == 9) {
+                return 120;
+            } else {
             return 44;
+        }
             break;
     }
-
 }
 //
 //-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
@@ -102,9 +113,14 @@ static NSString * const reuseIdentifier = @"PCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PCell" forIndexPath:indexPath];
     myPolcies section = indexPath.section;
     
+    UIFont *myFont = [UIFont fontWithName:@"Arial" size:15.0];
+    UIFont *LargeFont = [UIFont fontWithName:@"Arial" size:16.0];
+    
     switch (section) {
         case myPolciesIntroduction:
-            cell.textLabel.text = @"My Policies: Below contains all information for your current policies and payment information at the bottom of the page. Feel free to edit any information below as needed by clicking on the pencil icon at the top right of each section.";
+            cell.textLabel.text = @"*My Policies*"@" " @"Below contains all information for your current policies and payment information at the bottom of the page. Feel free to edit any information below as needed by clicking on the pencil icon at the top right.";
+            cell.textLabel.numberOfLines = 0;
+            cell.textLabel.font = LargeFont;
             break;
         case myPolciesPolicyNumber:
             cell.textLabel.text = @"Policy number:                      R123354623";
@@ -112,35 +128,54 @@ static NSString * const reuseIdentifier = @"PCell";
         case myPolciesInsuredInformation:
             switch (indexPath.row) {
                 case 0:
-                    cell.textLabel.text = @"Insured Name:                Derek Hornberger";
+                    cell.textLabel.text = @"Insured Name:                           Derek Hornberger";
+                    cell.textLabel.font = myFont;
                     break;
                 case 1:
-                    cell.textLabel.text = @"Insure Address:    81 W 530 S Orem Utah 84058";
+                    cell.textLabel.text = @"Insured Address:    81 W 530 S Orem Utah 84058";
+                    cell.textLabel.numberOfLines = 0;
+
+                    cell.textLabel.font = myFont;
+
                     break;
                 case 2:
                     cell.textLabel.text = @"Insured Property:";
+                    cell.textLabel.font = myFont;
+
                     break;
                 case 3:
-                    cell.textLabel.text = @"Enrolled On:                     04/05/2015";
+                    cell.textLabel.text = @"Enrolled On:                                           04/05/2015";
+                    cell.textLabel.font = myFont;
+
                     break;
                 case 4:
-                    cell.textLabel.text = @"Start Date:                      04/05/2015";
+                    cell.textLabel.text = @"Start Date:                                              04/05/2015";
+                    cell.textLabel.font = myFont;
+
                     break;
                 default:
                     cell.textLabel.text = @"Coverage Paid Through:";
+                    cell.textLabel.font = myFont;
+
                     break;
             }
             break;
         default:
             switch (indexPath.row) {
                 case 0:
-                    cell.textLabel.text = @"Monthly Payment Amount:          $25.00";
+                    cell.textLabel.text = @"Monthly Payment Amount:                         $25.00";
+                    cell.textLabel.font = myFont;
+
                     break;
                 case 1:
-                    cell.textLabel.text = @"Next Payment:                           04/05/2015";
+                    cell.textLabel.text = @"Next Payment:                                      04/05/2015";
+                    cell.textLabel.font = myFont;
+
                     break;
                 default:
-                    cell.textLabel.text = @"Last Payment:                           04/05/2016";
+                    cell.textLabel.text = @"Last Payment:                                      04/05/2016";
+                    cell.textLabel.font = myFont;
+
                     break;
             }
             break;

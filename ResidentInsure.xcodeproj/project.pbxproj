@@ -15,6 +15,9 @@
 		6543365C1AE8438900637396 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6543365A1AE8438900637396 /* LaunchScreen.xib */; };
 		654336681AE8438900637396 /* ResidentInsureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 654336671AE8438900637396 /* ResidentInsureTests.m */; };
 		654336731AE848A800637396 /* MyPoliciesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 654336721AE848A800637396 /* MyPoliciesTableViewController.m */; };
+		654336761AE979AB00637396 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 654336751AE979AB00637396 /* MenuViewController.m */; };
+		658A02DE1AF083C200E8AF4F /* SelectedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 658A02DD1AF083C200E8AF4F /* SelectedTableViewCell.m */; };
+		65B8BE5F1AE98FD2003E1F1E /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8BE5E1AE98FD2003E1F1E /* MenuTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,12 @@
 		654336671AE8438900637396 /* ResidentInsureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResidentInsureTests.m; sourceTree = "<group>"; };
 		654336711AE848A800637396 /* MyPoliciesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPoliciesTableViewController.h; sourceTree = "<group>"; };
 		654336721AE848A800637396 /* MyPoliciesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPoliciesTableViewController.m; sourceTree = "<group>"; };
+		654336741AE979AB00637396 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		654336751AE979AB00637396 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		658A02DC1AF083C200E8AF4F /* SelectedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedTableViewCell.h; sourceTree = "<group>"; };
+		658A02DD1AF083C200E8AF4F /* SelectedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedTableViewCell.m; sourceTree = "<group>"; };
+		65B8BE5D1AE98FD2003E1F1E /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		65B8BE5E1AE98FD2003E1F1E /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +75,8 @@
 		6543363F1AE8438900637396 = {
 			isa = PBXGroup;
 			children = (
+				658A02DC1AF083C200E8AF4F /* SelectedTableViewCell.h */,
+				658A02DD1AF083C200E8AF4F /* SelectedTableViewCell.m */,
 				6543364A1AE8438900637396 /* ResidentInsure */,
 				654336641AE8438900637396 /* ResidentInsureTests */,
 				654336491AE8438900637396 /* Products */,
@@ -91,6 +102,10 @@
 				654336711AE848A800637396 /* MyPoliciesTableViewController.h */,
 				654336721AE848A800637396 /* MyPoliciesTableViewController.m */,
 				654336551AE8438900637396 /* Main.storyboard */,
+				654336741AE979AB00637396 /* MenuViewController.h */,
+				654336751AE979AB00637396 /* MenuViewController.m */,
+				65B8BE5D1AE98FD2003E1F1E /* MenuTableViewController.h */,
+				65B8BE5E1AE98FD2003E1F1E /* MenuTableViewController.m */,
 				654336581AE8438900637396 /* Images.xcassets */,
 				6543365A1AE8438900637396 /* LaunchScreen.xib */,
 				6543364B1AE8438900637396 /* Supporting Files */,
@@ -173,6 +188,7 @@
 				TargetAttributes = {
 					654336471AE8438900637396 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 42K354DWNJ;
 					};
 					654336601AE8438900637396 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -228,6 +244,9 @@
 				654336511AE8438900637396 /* AppDelegate.m in Sources */,
 				6543364E1AE8438900637396 /* main.m in Sources */,
 				654336731AE848A800637396 /* MyPoliciesTableViewController.m in Sources */,
+				65B8BE5F1AE98FD2003E1F1E /* MenuTableViewController.m in Sources */,
+				658A02DE1AF083C200E8AF4F /* SelectedTableViewCell.m in Sources */,
+				654336761AE979AB00637396 /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +374,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ResidentInsure/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -365,6 +385,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ResidentInsure/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -424,6 +445,7 @@
 				6543366D1AE8438900637396 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6543366E1AE8438900637396 /* Build configuration list for PBXNativeTarget "ResidentInsureTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +454,7 @@
 				654336701AE8438900637396 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
